@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp2.1;netcoreapp2.2;netcoreapp3.0;netcoreapp3.1;net5.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0</TargetFrameworks>
     <IsPackable>true</IsPackable>
     <AssemblyName>dnt</AssemblyName>
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Rico Suter</Authors>
     <Company>Rico Suter</Company>
     <Product>DotNetTools (DNT)</Product>
@@ -14,7 +14,7 @@
     <PackageId>DNT</PackageId>
     <DebugType>embedded</DebugType>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <PackAsTool>true</PackAsTool>
+    <PackAsTool>false</PackAsTool>
     <Description>Command line tools to manage .NET Core, Standard and SDK-style projects and solutions.</Description>
     <PackageProjectUrl>https://github.com/RSuter/DNT</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/RSuter/DNT/blob/master/LICENSE.md</PackageLicenseUrl>
@@ -49,6 +49,6 @@
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
     <PackageReference Include="Microsoft.Build" Version="15.9.20" ExcludeAssets="runtime" />
-    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.4.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.9.20" ExcludeAssets="runtime" />
   </ItemGroup>
 </Project>
